@@ -13,7 +13,7 @@ exports.config = {
   /**
    * Your New Relic license key.
    */
-  license_key: 'ff5b22b1a78d10a878aa89c6f9b34e71d972NRAL',
+  license_key: 'xxxxxxxxxxxxxxxxxx',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
@@ -53,11 +53,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['FoodMe-BR'],
+  app_name: ['FoodMe-[name]'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'ff5b22b1a78d10a878aa89c6f9b34e71d972NRAL',
+  license_key: 'xxxxxxxxxxxx',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
