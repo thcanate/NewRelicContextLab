@@ -10,3 +10,36 @@ Copiar o arquivo *foodme-br.pem* para sua maquina local.
 
 [Link para Exercícios]
 (https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
+
+
+ ## 1. Instalar Log
+ npm init -y
+ npm i winston
+ 
+## 2. Criar o arquivo *logger.js* no diretório: 
+/opt/NewRelic-basics-lab-material/FoodMe
+
+const winston = require('winston');
+
+const userlogger = winston.createLogger({
+    format: winston.format.combine(
+        winston.format.errors({ stack: true }),
+        winston.format.json()
+    ),
+    transports: [
+            new winston.transports.Console(),
+            new winston.transports.File({ filename: 'applog.log' }),
+    ],
+});
+module.exports = userlogger;
+
+
+
+================
+
+
+## 3. Configurar o index.js
+
+const userLogger = require('../logger.js');
+
+
