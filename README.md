@@ -7,19 +7,21 @@ Para acessar o ambiente do EC2, procurar pelo seu nome e copiar o endereço de a
 
 Copiar o arquivo *foodme-br.pem* para sua maquina local.
 
-
-[Link para Exercícios]
-(https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
+[Link para Exercícios](https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
 
 
- ## 1. Instalar Log
+ ## 1. Instalar Biblioteca Winston
+ ```
  npm init -y
  
  npm i winston
+ ```
  
 ## 2. Criar o arquivo *logger.js* no diretório: 
-/opt/NewRelic-basics-lab-material/FoodMe
+*/opt/NewRelic-basics-lab-material/FoodMe*
 
+logger.js
+```
 const winston = require('winston');
 
 const userlogger = winston.createLogger({
@@ -33,14 +35,14 @@ const userlogger = winston.createLogger({
     ],
 });
 module.exports = userlogger;
+```
 
 
+## 3. Importar a biblioteca winston
 
-================
+No arquivo *server/index.js* inserir no TOPO do arquivo.
 
-
-## 3. Configurar o index.js
-
+```
 const userLogger = require('../logger.js');
-
+```
 
