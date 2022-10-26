@@ -8,4 +8,5 @@ Para acessar o ambiente do EC2, procurar pelo seu nome e copiar o endereço de a
 Copiar o arquivo *foodme-br.pem* para sua maquina local.
 
 
-[Link para Exercícios:] (https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
+[Link para Exercícios]
+(https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
