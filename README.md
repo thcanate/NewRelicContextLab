@@ -10,8 +10,16 @@ Copiar o arquivo *foodme-br.pem* para sua maquina local.
 [Link para Exercícios](https://developer.newrelic.com/collect-data/monitor-your-application/set-up-env)
 
 
+# Feedback
+Sua opnião importa!
+
+(https://bit.ly/Feedback_NewRelic)
+
+
+=============================================
+
  ## 1. Instalar Biblioteca Winston
- ```
+ ```sh
  npm init -y
  
  npm i winston
@@ -21,7 +29,7 @@ Copiar o arquivo *foodme-br.pem* para sua maquina local.
 */opt/NewRelic-basics-lab-material/FoodMe*
 
 logger.js
-```
+```javascript
 const winston = require('winston');
 
 const userlogger = winston.createLogger({
@@ -42,7 +50,7 @@ module.exports = userlogger;
 
 No arquivo *server/index.js* inserir no TOPO do arquivo.
 
-```
+```javascript
 const userLogger = require('../logger.js');
 ```
 
@@ -51,7 +59,7 @@ No arquivo *server/index.js* configurar algumas mensagens de log, para que apare
 
 **dir: /opt/NewRelic-basics-lab-material/FoodMe**
 
-```
+```javascript
  42.   // API
  43.  app.get(API_URL, function(req, res, next){
  44.    //Loggin NR
@@ -65,7 +73,7 @@ No arquivo **newrelic.js** ativar o Log in Context no agente
 
 *dir: /opt/NewRelic-basics-lab-material/FoodMe*
 
-```
+```javascript
 application_logging: {
      forwarding: {
      enabled: true
