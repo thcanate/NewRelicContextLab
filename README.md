@@ -59,4 +59,15 @@ No arquivo *server/index.js* configurar algumas mensagens de log, para que apare
  46.    res.status(200).send(storage.getAll().map(removeMenuItems))
  47.  });
 ```
+## Como ativar ou desativar Log in Context
 
+No arquivo **newrelic.js** ativar o Log in Context no agente
+
+*dir: /opt/NewRelic-basics-lab-material/FoodMe*
+
+```
+application_logging: {
+     forwarding: {
+     enabled: true
+    }
+```
