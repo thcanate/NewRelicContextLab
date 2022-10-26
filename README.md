@@ -46,3 +46,17 @@ No arquivo *server/index.js* inserir no TOPO do arquivo.
 const userLogger = require('../logger.js');
 ```
 
+## 4. Criar mensagem de Logs
+No arquivo *server/index.js* configurar algumas mensagens de log, para que apareçam na plataforma
+
+**dir: /opt/NewRelic-basics-lab-material/FoodMe**
+
+```
+ 42.   // API
+ 43.  app.get(API_URL, function(req, res, next){
+ 44.    //Loggin NR
+ 45.    userLogger.info('pagina Home selecionada');
+ 46.    res.status(200).send(storage.getAll().map(removeMenuItems))
+ 47.  });
+```
+
